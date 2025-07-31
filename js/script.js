@@ -83,11 +83,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Theme switcher (placeholder - currently using dark theme)
+// Theme switcher (dark/light mode)
 const themeSwitcher = document.getElementById('theme-switcher');
+
+// Helper: Apply theme from localStorage
+function applyTheme() {
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+    }
+}
+
+// On load, apply saved theme
+applyTheme();
+
 themeSwitcher.addEventListener('click', () => {
-    // Add your theme switching logic here
-    console.log('Theme switching functionality can be added here');
+    document.body.classList.toggle('dark-mode');
+    // Save preference
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
 });
 
 // Form handling

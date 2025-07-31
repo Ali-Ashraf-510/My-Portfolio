@@ -736,3 +736,20 @@ footer p {
     80% { transform: translate(2px, -2px); }
     100% { transform: translate(0); }
 }
+
+body.dark-mode {
+    --primary-gradient: linear-gradient(135deg, #232526 0%, #414345 100%);
+    --secondary-gradient: linear-gradient(135deg, #232526 0%, #1a1a2e 100%);
+    --accent-gradient: linear-gradient(135deg, #232526 0%, #64ffda 100%);
+    --dark-gradient: linear-gradient(135deg, #181818 0%, #232526 100%);
+    --text-primary: #ffffff;
+    --text-secondary: #b8bcc8;
+    --text-accent: #64ffda;
+    --surface-dark: rgba(255,255,255,0.01);
+    --surface-glass: rgba(255,255,255,0.04);
+    --border-glow: rgba(100,255,218,0.2);
+    background: var(--dark-gradient);
+    color: var(--text-primary);
+}
+
+/* يمكنك إضافة تعديلات إضافية هنا إذا أردت تخصيص عناصر معينة في الدارك مود */
