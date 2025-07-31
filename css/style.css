@@ -1,14 +1,29 @@
-/* --- General Styles & Variables --- */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
-
+/* ------------------------- */
+/* --- المتغيرات والأساسيات --- */
+/* ------------------------- */
 :root {
-    --primary-color: #007BFF;
-    --secondary-color: #6c757d;
-    --background-light: #f8f9fa;
-    --text-dark: #343a40;
-    --text-light: #ffffff;
-    --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    --transition-speed: 0.3s ease;
+    --light-bg: #f8f9fa;
+    --light-surface: #ffffff;
+    --light-text: #212529;
+    --light-text-secondary: #6c757d;
+    --primary-color: #0d6efd;
+    --primary-hover: #0b5ed7;
+    --border-color: #dee2e6;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    --dark-bg: #121212;
+    --dark-surface: #1e1e1e;
+    --dark-text: #e0e0e0;
+    --dark-text-secondary: #a0a0a0;
+    --dark-border-color: #333;
+}
+
+[data-theme="dark"] {
+    --light-bg: var(--dark-bg);
+    --light-surface: var(--dark-surface);
+    --light-text: var(--dark-text);
+    --light-text-secondary: var(--dark-text-secondary);
+    --border-color: var(--dark-border-color);
 }
 
 * {
@@ -23,34 +38,32 @@ html {
 
 body {
     font-family: 'Cairo', sans-serif;
-    line-height: 1.7;
-    color: var(--text-dark);
-    background-color: #fff;
+    background-color: var(--light-bg);
+    color: var(--light-text);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1140px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-h1, h2, h3 {
-    font-weight: 700;
-    margin-bottom: 1rem;
+section {
+    padding: 80px 0;
 }
 
 h2 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
     position: relative;
-    padding-bottom: 10px;
 }
 
 h2::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
@@ -59,25 +72,34 @@ h2::after {
     border-radius: 2px;
 }
 
-.content-section {
-    padding: 80px 0;
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.bg-light {
-    background-color: var(--background-light);
+.btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
 }
 
-/* --- Header & Navbar --- */
+/* ------------------- */
+/* --- شريط التنقل --- */
+/* ------------------- */
 .navbar {
-    background: var(--text-light);
-    color: var(--text-dark);
+    background-color: var(--light-surface);
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: all var(--transition-speed);
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s;
 }
 
 .navbar .container {
@@ -87,10 +109,15 @@ h2::after {
 }
 
 .navbar .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-color);
     text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
 }
 
 .nav-links {
@@ -103,12 +130,11 @@ h2::after {
 }
 
 .nav-links a {
-    color: var(--text-dark);
+    color: var(--light-text);
     text-decoration: none;
     font-weight: 600;
     position: relative;
     padding-bottom: 5px;
-    transition: color var(--transition-speed);
 }
 
 .nav-links a::after {
@@ -119,272 +145,232 @@ h2::after {
     width: 0;
     height: 2px;
     background-color: var(--primary-color);
-    transition: width var(--transition-speed);
-}
-
-.nav-links a:hover, .nav-links a.active {
-    color: var(--primary-color);
+    transition: width 0.3s;
 }
 
 .nav-links a:hover::after, .nav-links a.active::after {
     width: 100%;
 }
 
-.hamburger {
+/* Dark Mode Toggle */
+.theme-switcher {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-right: 25px;
+    color: var(--light-text-secondary);
+}
+
+/* Hamburger Menu */
+.hamburger { 
     display: none;
     cursor: pointer;
+    font-size: 1.8rem;
+    color: var(--light-text);
 }
 
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: var(--text-dark);
-    margin: 5px 0;
-    transition: all var(--transition-speed);
-}
-
-/* --- Hero Section --- */
-.hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
-    color: var(--text-light);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.hero-section h1 {
-    font-size: 3.5rem;
-}
-
-.hero-section .subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.cta-button {
-    background: var(--primary-color);
-    color: var(--text-light);
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background var(--transition-speed);
-}
-
-.cta-button:hover {
-    background: #0056b3;
-}
-
-/* --- About Me Section --- */
-.about-content {
+/* ----------------- */
+/* --- الصفحة الرئيسية --- */
+/* ----------------- */
+#home {
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    gap: 3rem;
 }
 
-.about-text {
-    flex: 2;
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
-.about-image {
-    flex: 1;
-    text-align: center;
+.home-text {
+    max-width: 600px;
 }
 
-.about-image img {
-    max-width: 100%;
-    border-radius: 50%;
-    box-shadow: 0 8px 16px rgba(0,123,255,0.2);
+.home-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
 }
 
-.skills {
-    margin-top: 2rem;
-}
-
-.skills span {
-    display: inline-block;
-    background: var(--background-light);
+.home-text h1 span {
     color: var(--primary-color);
-    padding: 5px 15px;
-    margin: 5px;
-    border-radius: 20px;
-    font-weight: 600;
-    border: 1px solid var(--primary-color);
 }
 
-/* --- Projects Section --- */
+.home-text p {
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    color: var(--light-text-secondary);
+}
+
+.social-media a {
+    color: var(--light-text);
+    font-size: 1.8rem;
+    margin-left: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-media a:hover {
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.home-image img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid var(--light-surface);
+    box-shadow: 0 0 0 10px var(--primary-color);
+}
+
+/* ------------------- */
+/* --- قسم المشاريع --- */
+/* ------------------- */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 
 .project-card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: var(--box-shadow);
+    background: var(--light-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .project-card img {
     width: 100%;
-    display: block;
+    height: 220px;
+    object-fit: cover;
 }
 
 .project-info {
     padding: 1.5rem;
 }
 
-.project-links {
-    margin-top: 1rem;
-}
+.project-info h3 { font-size: 1.5rem; }
+.project-info p { margin: 1rem 0; color: var(--light-text-secondary); }
 
 .project-links a {
+    margin-left: 1rem;
     text-decoration: none;
+    font-weight: 600;
     color: var(--primary-color);
-    margin-left: 15px;
+}
+
+.project-links a i { margin-right: 5px; }
+
+/* ------------------- */
+/* --- قسم الشهادات --- */
+/* ------------------- */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.certificate-card {
+    background-color: var(--light-surface);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.certificate-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.certificate-card h3 { font-size: 1.2rem; color: var(--primary-color); }
+.certificate-card p { color: var(--light-text-secondary); }
+
+/* -------------------- */
+/* --- قسم التواصل --- */
+/* -------------------- */
+.contact-content {
+    display: flex;
+    gap: 3rem;
+    background-color: var(--light-surface);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.contact-form, .contact-info {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--light-bg);
+    color: var(--light-text);
+    font-family: 'Cairo', sans-serif;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info i {
+    color: var(--primary-color);
+    margin-left: 10px;
+    width: 20px;
+}
+
+#form-status {
+    margin-top: 1rem;
     font-weight: 600;
 }
 
-.project-links a i {
-    margin-right: 5px;
-}
-
-/* --- Certificates Section --- */
-.certificates-list {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.certificate-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    border-bottom: 1px solid #eee;
-    transition: background-color var(--transition-speed);
-}
-
-.certificate-item:hover {
-    background-color: var(--background-light);
-}
-
-.certificate-details h3 {
-    margin-bottom: 0.25rem;
-}
-
-.certificate-details .issuer {
-    color: var(--secondary-color);
-}
-
-.view-certificate {
-    background: var(--primary-color);
-    color: #fff;
-    padding: 8px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color var(--transition-speed);
-    white-space: nowrap;
-}
-
-.view-certificate:hover {
-    background: #0056b3;
-}
-
-
-/* --- Footer --- */
+/* ----------------- */
+/* --- التذييل (Footer) --- */
+/* ----------------- */
 footer {
-    background: var(--text-dark);
-    color: var(--text-light);
     text-align: center;
     padding: 2rem 0;
+    background-color: var(--dark-surface);
+    color: var(--dark-text-secondary);
 }
 
-.social-links a {
-    color: var(--text-light);
-    font-size: 1.5rem;
-    margin: 0 10px;
-    transition: color var(--transition-speed);
-}
-
-.social-links a:hover {
-    color: var(--primary-color);
-}
-
-/* --- Animations --- */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.content-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.content-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* --- Responsive Design --- */
+/* ----------------------- */
+/* --- التصميم المتجاوب --- */
+/* ----------------------- */
 @media(max-width: 768px) {
-    h2 {
-        font-size: 2rem;
-    }
-    
+    h2 { font-size: 2.2rem; }
     .nav-links {
         position: fixed;
         right: -100%;
-        top: 65px;
-        background: white;
+        top: 70px; /* Navbar height */
+        background: var(--light-surface);
         flex-direction: column;
-        width: 100%;
-        height: calc(100vh - 65px);
-        text-align: center;
-        transition: right 0.4s ease-in-out;
+        width: 70%;
+        height: calc(100vh - 70px);
         padding-top: 2rem;
+        transition: right 0.4s ease-in-out;
     }
-
-    .nav-links.active {
-        right: 0;
-    }
-
-    .nav-links li {
-        margin: 1.5rem 0;
-    }
-
-    .hamburger {
-        display: block;
-    }
-    
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .hamburger.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    
-    .about-content {
-        flex-direction: column;
-    }
-
-    .about-image {
-        margin-top: 2rem;
-    }
+    .nav-links.active { right: 0; }
+    .nav-links li { margin: 1.5rem 0; text-align: center; }
+    .hamburger { display: block; }
+    .home-content { flex-direction: column-reverse; text-align: center; }
+    .social-media { margin-bottom: 1.5rem; }
+    .contact-content { flex-direction: column; }
 }
