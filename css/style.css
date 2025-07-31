@@ -665,91 +665,134 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+    }
     .nav-links {
         position: fixed;
         left: -100%;
-        top: 80px;
+        top: 60px;
         background: rgba(12, 12, 12, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
-        width: 70%;
-        height: calc(100vh - 80px);
-        padding: 2rem;
-        border-right: 1px solid var(--border-glow);
+        width: 100vw;
+        height: calc(100vh - 60px);
+        padding: 1.5rem 0.5rem;
+        border-right: none;
+        border-bottom: 1px solid var(--border-glow);
         transition: left 0.4s ease;
+        gap: 0;
     }
-
     .nav-links.active {
         left: 0;
     }
-
     .nav-links li {
-        margin: 1rem 0;
+        margin: 1.2rem 0;
+        width: 100%;
+        text-align: center;
     }
-
+    .nav-links a {
+        width: 100%;
+        display: block;
+        font-size: 1.2rem;
+        padding: 12px 0;
+    }
     .hamburger {
         display: block;
     }
-
     .home-content {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 40px;
+        gap: 30px;
     }
-
     .home-text h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
-
+    .home-text .greeting {
+        font-size: 1rem;
+    }
+    .home-text .title {
+        font-size: 1.1rem;
+    }
+    .home-text .description {
+        font-size: 1rem;
+    }
     .ai-avatar {
-        width: 250px;
-        height: 250px;
+        width: 180px;
+        height: 180px;
     }
-
     .avatar-core {
-        width: 150px;
-        height: 150px;
-        font-size: 3rem;
+        width: 100px;
+        height: 100px;
+        font-size: 2rem;
     }
-
-    .contact-content {
-        grid-template-columns: 1fr;
-        padding: 30px;
+    .avatar-core::before {
+        width: 120px;
+        height: 120px;
     }
-
+    .tech-stack {
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+    .tech-item {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+    .social-media {
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+    .social-media a {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
     .cta-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
     }
-
+    .btn {
+        width: 90vw;
+        max-width: 320px;
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+    section {
+        padding: 50px 0;
+    }
     h2 {
-        font-size: 2.2rem;
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+    .projects-grid,
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .project-card img,
+    .certificate-card img {
+        height: 140px;
+    }
+    .project-info {
+        padding: 15px;
+    }
+    .certificate-card {
+        padding: 18px;
+    }
+    .contact-content {
+        grid-template-columns: 1fr;
+        padding: 18px;
+        gap: 18px;
+    }
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.95rem;
+        padding: 10px 12px;
+    }
+    footer {
+        padding: 18px 0;
     }
 }
 
-/* Glitch Effect */
-@keyframes glitch {
-    0% { transform: translate(0); }
-    20% { transform: translate(-2px, 2px); }
-    40% { transform: translate(-2px, -2px); }
-    60% { transform: translate(2px, 2px); }
-    80% { transform: translate(2px, -2px); }
-    100% { transform: translate(0); }
-}
-
-body.dark-mode {
-    --primary-gradient: linear-gradient(135deg, #232526 0%, #414345 100%);
-    --secondary-gradient: linear-gradient(135deg, #232526 0%, #1a1a2e 100%);
-    --accent-gradient: linear-gradient(135deg, #232526 0%, #64ffda 100%);
-    --dark-gradient: linear-gradient(135deg, #181818 0%, #232526 100%);
-    --text-primary: #ffffff;
-    --text-secondary: #b8bcc8;
-    --text-accent: #64ffda;
-    --surface-dark: rgba(255,255,255,0.01);
-    --surface-glass: rgba(255,255,255,0.04);
-    --border-glow: rgba(100,255,218,0.2);
-    background: var(--dark-gradient);
-    color: var(--text-primary);
-}
-
-/* يمكنك إضافة تعديلات إضافية هنا إذا أردت تخصيص عناصر معينة في الدارك مود */
+/* ...existing code... */

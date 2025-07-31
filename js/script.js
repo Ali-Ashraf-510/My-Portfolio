@@ -83,31 +83,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Theme switcher (dark/light mode)
-const themeSwitcher = document.getElementById('theme-switcher');
-
-// Helper: Apply theme from localStorage
-function applyTheme() {
-    if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-    } else {
-        document.body.classList.remove('dark-mode');
-    }
-}
-
-// On load, apply saved theme
-applyTheme();
-
-themeSwitcher.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    // Save preference
-    if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-    } else {
-        localStorage.setItem('theme', 'light');
-    }
-});
-
 // Form handling
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
@@ -228,6 +203,31 @@ const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
 document.addEventListener('keydown', (e) => {
     konamiCode.push(e.keyCode);
     if (konamiCode.length > konamiSequence.length) {
+        konamiCode.shift();
+    }
+    
+    if (konamiCode.join(',') === konamiSequence.join(',')) {
+        document.body.style.animation = 'glitch 2s infinite';
+        setTimeout(() => {
+            document.body.style.animation = '';
+            alert('🤖 AI Mode Activated! Welcome to the Matrix, Neo...');
+        }, 3000);
+    }
+});
+
+// Add some AI-themed console logs
+const aiQuotes = [
+    "The future belongs to artificial intelligence 🤖",
+    "Machine learning is the new electricity ⚡",
+    "Data is the new oil, AI is the refinery 🛢️",
+    "In AI we trust, in data we verify 📊",
+    "Neural networks: inspired by biology, powered by mathematics 🧠"
+];
+
+setInterval(() => {
+    const randomQuote = aiQuotes[Math.floor(Math.random() * aiQuotes.length)];
+    console.log(`%c${randomQuote}`, 'color: #64ffda; font-weight: bold;');
+}, 30000);
         konamiCode.shift();
     }
     
