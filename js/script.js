@@ -1,4 +1,4 @@
-        // Neural network background animation
+// Neural network background animation
         function createNeuralNetwork() {
             const neuralBg = document.querySelector('.neural-bg');
             const nodeCount = 20;
@@ -45,39 +45,6 @@
         document.querySelectorAll('section, .project-card, .certificate-card').forEach(el => {
             observer.observe(el);
         });
-
-        // Theme switcher functionality
-        const themeSwitcher = document.getElementById('theme-switcher');
-        const body = document.body;
-
-        themeSwitcher.addEventListener('click', () => {
-            const currentTheme = body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            body.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            
-            // Update CSS variables for light theme
-            if (newTheme === 'light') {
-                document.documentElement.style.setProperty('--dark-bg', '#ffffff');
-                document.documentElement.style.setProperty('--dark-surface', '#f8f9fa');
-                document.documentElement.style.setProperty('--dark-card', '#ffffff');
-                document.documentElement.style.setProperty('--text-primary', '#2d3748');
-                document.documentElement.style.setProperty('--text-secondary', '#718096');
-                document.documentElement.style.setProperty('--border-color', '#e2e8f0');
-            } else {
-                document.documentElement.style.setProperty('--dark-bg', '#0a0a0a');
-                document.documentElement.style.setProperty('--dark-surface', '#1a1a1a');
-                document.documentElement.style.setProperty('--dark-card', '#2a2a2a');
-                document.documentElement.style.setProperty('--text-primary', '#ffffff');
-                document.documentElement.style.setProperty('--text-secondary', '#a0a0a0');
-                document.documentElement.style.setProperty('--border-color', '#333');
-            }
-        });
-
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        body.setAttribute('data-theme', savedTheme);
 
         // Mobile menu toggle
         const hamburger = document.querySelector('.hamburger');
