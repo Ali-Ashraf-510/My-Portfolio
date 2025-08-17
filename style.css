@@ -255,7 +255,7 @@ h2 {
     margin: 2rem 0;
     box-shadow: 0 6px 32px rgba(0,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.08);
     border-radius: 18px;
-    background: #fff;
+    background: var(--card-bg); /* <-- fix: use variable instead of #fff */
     padding: 1.2rem 1rem;
     transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
