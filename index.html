@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali Ashraf - ML/DL Engineer</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="scroll-indicator"></div>
 
     <nav class="navbar">
         <div class="container">
@@ -29,13 +30,16 @@
         <header class="hero">
             <div class="container">
                 <h1>Machine Learning & Deep Learning Engineer</h1>
-                <p class="hero-subtitle">Creating intelligent solutions with data and algorithms.</p>
-                <a href="#projects" class="btn">View My Work</a>
+                <p class="hero-subtitle">Creating intelligent solutions with cutting-edge algorithms and data-driven insights.</p>
+                <a href="#projects" class="btn">
+                    <span>Explore My Work</span>
+                    <span>→</span>
+                </a>
             </div>
         </header>
 
         <div class="container about-container">
-            <section id="about" class="about-section">
+            <section id="about" class="about-section fade-in">
                 <h2>About Me</h2>
                 <div class="about-content">
                     <img src="assets/Profile/profile.jpeg" alt="Ali Ashraf" class="profile-pic">
@@ -48,85 +52,113 @@
     </section>
 
     <main>
-        <section id="skills" class="container">
+        <section id="skills" class="container fade-in">
              <div class="skills-section">
                 <h2>Core Skills</h2>
+                <p class="section-subtitle">Technologies and frameworks I work with</p>
                 <div class="skills-grid">
-                    <div class="skill-card"><h3>Machine Learning</h3><p>Regression, Classification, Clustering.</p></div>
-                    <div class="skill-card"><h3>Deep Learning</h3><p>CNNs, RNNs, Transformers.</p></div>
-                    <div class="skill-card"><h3>Python</h3><p>NumPy, Pandas, Scikit-learn.</p></div>
-                    <div class="skill-card"><h3>Frameworks</h3><p>PyTorch, TensorFlow, Keras.</p></div>
+                    <div class="skill-card">
+                        <h3>Machine Learning</h3>
+                        <p>Advanced regression, classification, and clustering algorithms with scikit-learn and custom implementations.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Deep Learning</h3>
+                        <p>Convolutional Neural Networks, Recurrent Networks, and Transformer architectures for complex AI tasks.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Python Ecosystem</h3>
+                        <p>NumPy, Pandas, Scikit-learn, and data manipulation for robust ML pipelines.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>ML Frameworks</h3>
+                        <p>PyTorch, TensorFlow, and Keras for building and deploying production-ready models.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="container">
-            <h2>My Projects</h2>
-            <p class="section-subtitle">Here are some of the projects I've worked on.</p>
+        <section id="projects" class="container fade-in">
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">Innovative solutions powered by machine learning</p>
             <div class="projects-grid single-card">
                 <div class="project-card">
-                    <img src="assets/Projects/Fire Detection.png" alt="Project Image">
+                    <img src="assets/Projects/Fire Detection.png" alt="Fire Detection Project">
                     <div class="card-content">
-                        <h3>Image Recognition Model</h3>
-                        <p>A CNN-based model built with MobileNetV2 to classify images with over 98% accuracy.</p>
+                        <h3>Fire Detection System</h3>
+                        <p>A state-of-the-art CNN-based model built with MobileNetV2 architecture to detect fire in real-time with over 98% accuracy. Optimized for mobile deployment.</p>
                         <div class="tools">
-                            <span>MobileNetV2</span><span>Computer Vision</span>
+                            <span>MobileNetV2</span>
+                            <span>Computer Vision</span>
+                            <span>PyTorch</span>
                         </div>
-                        <a href="https://github.com/Ali-Ashraf-510/FireDetectionApp" class="btn" target="_blank">View on GitHub</a>
+                        <a href="https://github.com/Ali-Ashraf-510/FireDetectionApp" class="btn" target="_blank">
+                            <span>View on GitHub</span>
+                            <span>↗</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="certificates" class="container">
+        <section id="certificates" class="container fade-in">
             <h2>Professional Certificates</h2>
-            <p class="section-subtitle">My credentials and qualifications.</p>
+            <p class="section-subtitle">Industry-recognized credentials and achievements</p>
             <div class="certificates-grid single-card">
                 <div class="certificate-card">
-                    <img src="assets/Certifications/HCIA.png" alt="Certificate Image">
+                    <img src="assets/Certifications/HCIA.png" alt="HCIA Certificate">
                     <div class="card-content">
-                        <h3>HCIA Course </h3>
-                        <p class="issuer">Issued by Huawei</p>
+                        <h3>HCIA Certification</h3>
+                        <p class="issuer">Issued by Huawei Technologies</p>
+                        <p>Certified in Huawei's AI and cloud computing fundamentals, demonstrating expertise in enterprise-level AI solutions.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="container">
-            <h2>Get In Touch</h2>
-            <p class="section-subtitle">I'm open to new opportunities and collaborations.</p>
+        <section id="contact" class="container fade-in">
+            <h2>Let's Connect</h2>
+            <p class="section-subtitle">Ready to collaborate on exciting AI projects</p>
             <div class="contact-container">
                 <form class="contact-form" action="https://formspree.io/f/myzpnwee" method="POST">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email Address</label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or opportunity..."></textarea>
                     </div>
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit" class="btn">
+                        <span>Send Message</span>
+                        <span>✉</span>
+                    </button>
                 </form>
                 <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p>Connect with me on social media or send me an email.</p>
+                    <h3>Get in Touch</h3>
+                    <p>Let's discuss how we can bring your AI vision to life.</p>
                     <div class="social-links">
-                    <a href="www.linkedin.com/in/ali-ashraf-8b619b22a" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/Ali-Ashraf-510" target="_blank">GitHub</a>
-                    <a href="mailto:aliabofooda1234@gmail.com">Email</a>
+                        <a href="https://www.linkedin.com/in/ali-ashraf-8b619b22a" target="_blank">
+                            <span>💼</span> LinkedIn Profile
+                        </a>
+                        <a href="https://github.com/Ali-Ashraf-510" target="_blank">
+                            <span>🚀</span> GitHub Portfolio
+                        </a>
+                        <a href="mailto:aliabofooda1234@gmail.com">
+                            <span>✉️</span> Email Direct
+                        </a>
+                    </div>
                 </div>
-            </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Ali Ashraf. All Rights Reserved.</p>
+            <p>&copy; 2025 Ali Ashraf. Crafted with passion for AI innovation.</p>
         </div>
     </footer>
 
