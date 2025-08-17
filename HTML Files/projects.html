@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Alex Doe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">Alex Doe</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="container page-content">
+        <section id="projects">
+            <h2>My Projects</h2>
+            <p class="section-subtitle">Here are some of the projects I've worked on.</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x250/4A90E2/FFFFFF?text=Project+Preview" alt="Project Image">
+                    <div class="card-content">
+                        <h3>Image Recognition Model</h3>
+                        <p>A CNN-based model built with PyTorch to classify images from the CIFAR-10 dataset with over 90% accuracy.</p>
+                        <div class="tools">
+                            <span>PyTorch</span>
+                            <span>NumPy</span>
+                            <span>Computer Vision</span>
+                        </div>
+                        <a href="#" class="btn" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x250/7ED321/FFFFFF?text=Project+Preview" alt="Project Image">
+                    <div class="card-content">
+                        <h3>Sentiment Analysis API</h3>
+                        <p>Developed a REST API using Flask and a transformer model from Hugging Face for real-time sentiment analysis of text.</p>
+                        <div class="tools">
+                            <span>TensorFlow</span>
+                            <span>Hugging Face</span>
+                            <span>Flask</span>
+                        </div>
+                        <a href="#" class="btn" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/400x250/BD10E0/FFFFFF?text=Project+Preview" alt="Project Image">
+                    <div class="card-content">
+                        <h3>Customer Churn Prediction</h3>
+                        <p>A classic machine learning project to predict customer churn using logistic regression and random forests on a telecom dataset.</p>
+                        <div class="tools">
+                            <span>Scikit-learn</span>
+                            <span>Pandas</span>
+                            <span>Matplotlib</span>
+                        </div>
+                        <a href="#" class="btn" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+                 </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Alex Doe. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
