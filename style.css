@@ -347,8 +347,32 @@ html {
     scroll-padding-top: 80px; /* Optional: offsets scroll position to account for sticky nav */
 }
 
-/* --- General Setup & Variables --- */
-:root {
-    --primary-color: #4a69bd;
-    /* ... rest of your CSS is the same ... */
+/* --- Night mode card styles --- */
+body.dark-mode .project-card,
+body.dark-mode .certificate-card,
+body.dark-mode .projects-grid.single-card .project-card,
+body.dark-mode .certificates-grid.single-card .certificate-card {
+    background: #23272f;
+    border: 1px solid #353b45;
+    box-shadow: 0 6px 32px rgba(20,20,30,0.25), 0 1.5px 6px rgba(20,20,30,0.18);
+    color: #f1f1f1;
+}
+
+body.dark-mode .project-card h3,
+body.dark-mode .certificate-card h3,
+body.dark-mode .project-card p,
+body.dark-mode .certificate-card p,
+body.dark-mode .certificate-card .issuer {
+    color: #e0e0e0;
+}
+
+body.dark-mode .project-card .tools span {
+    background: #353b45;
+    color: #e0e0e0;
+}
+
+body.dark-mode .project-card img,
+body.dark-mode .certificate-card img {
+    background: #23272f;
+    box-shadow: 0 2px 12px rgba(20,20,30,0.18);
 }
