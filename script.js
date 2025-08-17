@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentTheme) {
         document.documentElement.setAttribute('data-theme', currentTheme);
         if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
             themeToggle.textContent = '☀️';
         }
     } else {
@@ -17,10 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
         let theme = document.documentElement.getAttribute('data-theme');
         if (theme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'light');
+            document.body.classList.remove('dark-mode');
             localStorage.setItem('theme', 'light');
             themeToggle.textContent = '🌙';
         } else {
             document.documentElement.setAttribute('data-theme', 'dark');
+            document.body.classList.add('dark-mode');
             localStorage.setItem('theme', 'dark');
             themeToggle.textContent = '☀️';
         }
