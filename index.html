@@ -38,7 +38,7 @@
             <section id="about" class="about-section">
                 <h2>About Me</h2>
                 <div class="about-content">
-                    <img src="https://via.placeholder.com/150" alt="Ali Ashraf" class="profile-pic">
+                    <img src="/assets/Profile/profile.jpeg" alt="Ali Ashraf" class="profile-pic">
                     <p>
                         Hello! I'm Ali Ashraf, a passionate Machine Learning Engineer specializing in Deep Learning. With a strong foundation in Python and experience with frameworks like PyTorch and TensorFlow, I enjoy building models that solve real-world problems. From natural language processing to computer vision, I am dedicated to pushing the boundaries of artificial intelligence.
                     </p>
@@ -64,9 +64,19 @@
             <h2>My Projects</h2>
             <p class="section-subtitle">Here are some of the projects I've worked on.</p>
             <div class="projects-grid">
-                <div class="project-card"><img src="https://via.placeholder.com/400x250/4A90E2/FFFFFF?text=Project+Preview" alt="Project Image"><div class="card-content"><h3>Image Recognition Model</h3><p>A CNN-based model built with PyTorch to classify images from the CIFAR-10 dataset with over 90% accuracy.</p><div class="tools"><span>PyTorch</span><span>NumPy</span><span>Computer Vision</span></div><a href="#" class="btn" target="_blank">View on GitHub</a></div></div>
-                <div class="project-card"><img src="https://via.placeholder.com/400x250/7ED321/FFFFFF?text=Project+Preview" alt="Project Image"><div class="card-content"><h3>Sentiment Analysis API</h3><p>Developed a REST API using Flask and a transformer model from Hugging Face for real-time sentiment analysis of text.</p><div class="tools"><span>TensorFlow</span><span>Hugging Face</span><span>Flask</span></div><a href="#" class="btn" target="_blank">View on GitHub</a></div></div>
-                <div class="project-card"><img src="https://via.placeholder.com/400x250/BD10E0/FFFFFF?text=Project+Preview" alt="Project Image"><div class="card-content"><h3>Customer Churn Prediction</h3><p>A classic machine learning project to predict customer churn using logistic regression and random forests on a telecom dataset.</p><div class="tools"><span>Scikit-learn</span><span>Pandas</span><span>Matplotlib</span></div><a href="#" class="btn" target="_blank">View on GitHub</a></div></div>
+                <div class="project-card">
+                    <img src="/assets/Projects/Fire Detection.png" alt="Project Image">
+                    <div class="card-content">
+                        <h3>Image Recognition Model</h3>
+                        <p>A CNN-based model built with MobileNetV2 to classify images from the CIFAR-10 dataset with over 98% accuracy.</p>
+                        <div class="tools">
+                            <span>MobileNetV2</span><span>Computer Vision</span>
+                        </div>
+                        <a href="https://github.com/Ali-Ashraf-510/FireDetectionApp" class="btn" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+                <!-- <div class="project-card"><img src="https://via.placeholder.com/400x250/7ED321/FFFFFF?text=Project+Preview" alt="Project Image"><div class="card-content"><h3>Sentiment Analysis API</h3><p>Developed a REST API using Flask and a transformer model from Hugging Face for real-time sentiment analysis of text.</p><div class="tools"><span>TensorFlow</span><span>Hugging Face</span><span>Flask</span></div><a href="#" class="btn" target="_blank">View on GitHub</a></div></div>
+                <div class="project-card"><img src="https://via.placeholder.com/400x250/BD10E0/FFFFFF?text=Project+Preview" alt="Project Image"><div class="card-content"><h3>Customer Churn Prediction</h3><p>A classic machine learning project to predict customer churn using logistic regression and random forests on a telecom dataset.</p><div class="tools"><span>Scikit-learn</span><span>Pandas</span><span>Matplotlib</span></div><a href="#" class="btn" target="_blank">View on GitHub</a></div></div> -->
             </div>
         </section>
 
@@ -74,9 +84,15 @@
             <h2>Professional Certificates</h2>
             <p class="section-subtitle">My credentials and qualifications.</p>
             <div class="certificates-grid">
-                <div class="certificate-card"><img src="https://via.placeholder.com/400x250/F5A623/FFFFFF?text=Certificate" alt="Certificate Image"><div class="card-content"><h3>Deep Learning Specialization</h3><p class="issuer">Issued by Coursera & deeplearning.ai</p></div></div>
-                <div class="certificate-card"><img src="https://via.placeholder.com/400x250/4A90E2/FFFFFF?text=Certificate" alt="Certificate Image"><div class="card-content"><h3>TensorFlow Developer Certificate</h3><p class="issuer">Issued by Google</p></div></div>
-                <div class="certificate-card"><img src="https://via.placeholder.com/400x250/D0021B/FFFFFF?text=Certificate" alt="Certificate Image"><div class="card-content"><h3>Certified Associate in Python Programming</h3><p class="issuer">Issued by Python Institute</p></div></div>
+                <div class="certificate-card">
+                    <img src="assets/Certifications/HCIA.png" alt="Certificate Image">
+                    <div class="card-content">
+                        <h3>HCIA Course </h3>
+                        <p class="issuer">Issued by Huawei</p>
+                    </div>
+                </div>
+                <!-- <div class="certificate-card"><img src="https://via.placeholder.com/400x250/4A90E2/FFFFFF?text=Certificate" alt="Certificate Image"><div class="card-content"><h3>TensorFlow Developer Certificate</h3><p class="issuer">Issued by Google</p></div></div>
+                <div class="certificate-card"><img src="https://via.placeholder.com/400x250/D0021B/FFFFFF?text=Certificate" alt="Certificate Image"><div class="card-content"><h3>Certified Associate in Python Programming</h3><p class="issuer">Issued by Python Institute</p></div></div> -->
             </div>
         </section>
 
@@ -84,8 +100,30 @@
             <h2>Get In Touch</h2>
             <p class="section-subtitle">I'm open to new opportunities and collaborations.</p>
             <div class="contact-container">
-                <form class="contact-form"><div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" required></div><div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required></div><div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div><button type="submit" class="btn">Send Message</button></form>
-                <div class="contact-info"><h3>Contact Information</h3><p>Connect with me on social media or send me an email.</p><div class="social-links"><a href="#" target="_blank">LinkedIn</a><a href="#" target="_blank">GitHub</a><a href="mailto:alex.doe@example.com">Email</a></div></div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Connect with me on social media or send me an email.</p>
+                    <div class="social-links">
+                    <a href="www.linkedin.com/in/ali-ashraf-8b619b22a" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Ali-Ashraf-510" target="_blank">GitHub</a>
+                    <a href="mailto:aliabofooda1234@gmail.com">Email</a>
+                </div>
+            </div>
             </div>
         </section>
     </main>
