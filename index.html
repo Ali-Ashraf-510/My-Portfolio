@@ -12,54 +12,52 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <!-- Google Fonts - Improved typography with Inter and Fira Code -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Enhanced theme toggle with better accessibility -->
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle between light and dark theme" title="Switch Theme">
-        <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Switch Theme">
+        <i class="fas fa-moon" id="theme-icon"></i>
     </button>
 
-    <!-- Hero Section - Enhanced with better hierarchy -->
-    <section class="hero-section" id="home" aria-label="Introduction">
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-xl-8 col-lg-10">
-                    <div class="hero-content text-center">
-                        <!-- Improved semantic structure -->
+                <div class="col-xl-10 col-lg-12">
+                    <div class="hero-content">
                         <h1 class="hero-title">
                             <span class="hero-greeting">Hello, I'm</span>
                             <span class="hero-name gradient-text">Ali Ashraf</span>
                         </h1>
                         <h2 class="hero-subtitle">Machine Learning & Deep Learning Engineer</h2>
-                        <p class="hero-description">Crafting intelligent solutions with cutting-edge algorithms and data-driven insights to solve real-world challenges.</p>
+                        <p class="hero-description">
+                            Crafting intelligent solutions with cutting-edge algorithms and data-driven insights to solve real-world challenges through the power of artificial intelligence.
+                        </p>
                         
-                        <!-- Enhanced CTA with improved focus states -->
                         <div class="hero-actions">
-                            <a href="#projects" class="btn-primary-gradient" role="button">
+                            <a href="#projects" class="btn-modern">
                                 <span>Explore My Work</span>
-                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                <i class="fas fa-arrow-right"></i>
                             </a>
-                            <a href="#contact" class="btn-outline" role="button">
+                            <a href="#contact" class="btn-outline">
                                 <span>Let's Connect</span>
                             </a>
                         </div>
                         
-                        <!-- Quick stats for engagement -->
                         <div class="hero-stats">
-                            <div class="stat-item">
+                            <div class="stat-card">
                                 <span class="stat-number">98%</span>
                                 <span class="stat-label">Model Accuracy</span>
                             </div>
-                            <div class="stat-item">
+                            <div class="stat-card">
                                 <span class="stat-number">1+</span>
                                 <span class="stat-label">Years Experience</span>
                             </div>
-                            <div class="stat-item">
+                            <div class="stat-card">
                                 <span class="stat-number">100%</span>
                                 <span class="stat-label">Passion Driven</span>
                             </div>
@@ -70,233 +68,213 @@
         </div>
     </section>
 
-    <!-- About Section - Enhanced layout and accessibility -->
-    <section class="about-section" id="about" aria-label="About Ali Ashraf">
+    <!-- About Section -->
+    <section class="section section-alternate" id="about">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-xl-8">
-                    <!-- Improved semantic structure -->
-                    <header class="section-header text-center mb-5">
-                        <h2 class="section-title gradient-text">About Me</h2>
-                        <p class="section-subtitle">Passionate about transforming data into intelligent solutions</p>
-                    </header>
-                    
-                    <div class="glass-card about-card">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 text-center mb-4 mb-lg-0">
-                                <!-- Enhanced profile image with better accessibility -->
-                                <div class="profile-wrapper">
-                                    <img src="assets/Profile/profile.jpeg" 
-                                         alt="Ali Ashraf - Professional headshot of a Machine Learning Engineer" 
-                                         class="profile-image"
-                                         loading="lazy">
-                                    <div class="profile-ring"></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="about-content">
-                                    <p class="about-text lead">
-                                        Hello! I'm <strong>Ali Ashraf</strong>, a passionate Machine Learning Engineer specializing in Deep Learning technologies. With expertise in Python and hands-on experience with frameworks like PyTorch and TensorFlow, I'm dedicated to building intelligent models that address real-world challenges.
-                                    </p>
-                                    <p class="about-text">
-                                        From natural language processing to computer vision applications, I thrive on pushing the boundaries of artificial intelligence. My approach combines solid theoretical foundations with practical implementation skills to deliver impactful solutions.
-                                    </p>
-                                    
-                                    <!-- Added key highlights -->
-                                    <div class="about-highlights mt-4">
-                                        <div class="highlight-item">
-                                            <i class="fas fa-graduation-cap text-primary" aria-hidden="true"></i>
-                                            <span>NTI AI Graduate with 98% Score</span>
-                                        </div>
-                                        <div class="highlight-item">
-                                            <i class="fas fa-certificate text-primary" aria-hidden="true"></i>
-                                            <span>HCIA Certified Professional</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title gradient-text">About Me</h2>
+                <p class="section-subtitle">Passionate about transforming data into intelligent solutions</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Skills Section - Enhanced with better visual hierarchy -->
-    <section class="skills-section" id="skills" aria-label="Technical Skills and Expertise">
-        <div class="container">
-            <header class="section-header text-center mb-5">
-                <h2 class="section-title gradient-text">Core Expertise</h2>
-                <p class="section-subtitle">Technologies and frameworks powering intelligent solutions</p>
-            </header>
             
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-3 col-md-6">
-                    <div class="glass-card skill-card h-100">
-                        <div class="skill-icon">
-                            <i class="fas fa-brain" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="skill-title">Machine Learning</h3>
-                        <p class="skill-description">Advanced regression, classification, and clustering algorithms with scikit-learn and custom implementations for predictive modeling.</p>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Scikit-learn</span>
-                            <span class="skill-tag">Pandas</span>
-                            <span class="skill-tag">NumPy</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="glass-card skill-card h-100">
-                        <div class="skill-icon">
-                            <i class="fas fa-network-wired" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="skill-title">Deep Learning</h3>
-                        <p class="skill-description">Convolutional Neural Networks, Recurrent Networks, and Transformer architectures for complex AI applications.</p>
-                        <div class="skill-tags">
-                            <span class="skill-tag">PyTorch</span>
-                            <span class="skill-tag">TensorFlow</span>
-                            <span class="skill-tag">Keras</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="glass-card skill-card h-100">
-                        <div class="skill-icon">
-                            <i class="fas fa-eye" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="skill-title">Computer Vision</h3>
-                        <p class="skill-description">Image processing, object detection, and classification using state-of-the-art CNN architectures and OpenCV.</p>
-                        <div class="skill-tags">
-                            <span class="skill-tag">OpenCV</span>
-                            <span class="skill-tag">YOLO</span>
-                            <span class="skill-tag">MobileNet</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="glass-card skill-card h-100">
-                        <div class="skill-icon">
-                            <i class="fab fa-python" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="skill-title">Python Ecosystem</h3>
-                        <p class="skill-description">Comprehensive data science stack with robust ML pipelines, data visualization, and deployment solutions.</p>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Jupyter</span>
-                            <span class="skill-tag">Flask</span>
-                            <span class="skill-tag">Docker</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section - Enhanced with better presentation -->
-    <section class="projects-section" id="projects" aria-label="Featured Projects Portfolio">
-        <div class="container">
-            <header class="section-header text-center mb-5">
-                <h2 class="section-title gradient-text">Featured Projects</h2>
-                <p class="section-subtitle">Innovative solutions powered by artificial intelligence</p>
-            </header>
-            
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-xl-6">
-                    <article class="glass-card project-card">
-                        <div class="project-image-wrapper">
-                            <img src="assets/Projects/Fire Detection.png" 
-                                 alt="Fire Detection System - Real-time fire detection using CNN" 
-                                 class="project-image"
+            <div class="glass-card about-card">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                        <div class="profile-wrapper">
+                            <img src="assets/Profile/profile.jpeg" 
+                                 alt="Ali Ashraf - Machine Learning Engineer" 
+                                 class="profile-image"
                                  loading="lazy">
-                            <div class="project-overlay">
-                                <div class="project-metrics">
-                                    <span class="metric">98% Accuracy</span>
-                                    <span class="metric">Real-time</span>
-                                </div>
-                            </div>
+                            <div class="profile-ring"></div>
                         </div>
-                        
-                        <div class="project-content">
-                            <header class="project-header">
-                                <h3 class="project-title">Fire Detection System</h3>
-                                <div class="project-status">
-                                    <span class="status-badge status-completed">Completed</span>
-                                </div>
-                            </header>
-                            
-                            <p class="project-description">
-                                A state-of-the-art CNN-based fire detection model built with MobileNetV2 architecture, achieving over 98% accuracy in real-time fire detection. Optimized for mobile deployment with efficient resource utilization.
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="about-content">
+                            <p class="about-text lead">
+                                Hello! I'm <strong>Ali Ashraf</strong>, a passionate Machine Learning Engineer specializing in Deep Learning technologies. With expertise in Python and hands-on experience with frameworks like PyTorch and TensorFlow, I'm dedicated to building intelligent models that address real-world challenges.
+                            </p>
+                            <p class="about-text">
+                                From natural language processing to computer vision applications, I thrive on pushing the boundaries of artificial intelligence. My approach combines solid theoretical foundations with practical implementation skills to deliver impactful solutions.
                             </p>
                             
-                            <div class="project-features">
-                                <ul class="features-list">
-                                    <li>Real-time processing capability</li>
-                                    <li>Mobile-optimized architecture</li>
-                                    <li>High accuracy detection (98%+)</li>
-                                    <li>Low computational overhead</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="tech-stack">
-                                <span class="tech-tag primary">MobileNetV2</span>
-                                <span class="tech-tag">Computer Vision</span>
-                                <span class="tech-tag">PyTorch</span>
-                                <span class="tech-tag">OpenCV</span>
-                            </div>
-                            
-                            <div class="project-actions">
-                                <a href="https://github.com/Ali-Ashraf-510/FireDetectionApp" 
-                                   class="btn-primary-gradient"
-                                   target="_blank" 
-                                   rel="noopener noreferrer"
-                                   aria-label="View Fire Detection project on GitHub">
-                                    <i class="fab fa-github" aria-hidden="true"></i>
-                                    <span>View on GitHub</span>
-                                </a>
-                                <button class="btn-secondary" aria-label="View project demo">
-                                    <i class="fas fa-play" aria-hidden="true"></i>
-                                    <a href="https://www.linkedin.com/posts/ali-ashraf-8b619b22a_ai-deeplearning-tensorflow-activity-7356086060134653952-cm_f?utm_source=share&utm_medium=member_desktop&rcm=ACoAADlWFEoBXZCDOatxLUNOb9A4uVa4pg-laiw" 
-                                    target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                                        <span>Live Demo</span>
-                                    </a>
-                                </button>
+                            <div class="highlight-grid">
+                                <div class="highlight-item">
+                                    <i class="fas fa-graduation-cap highlight-icon"></i>
+                                    <span>NTI AI Graduate with 98% Score</span>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fas fa-certificate highlight-icon"></i>
+                                    <span>HCIA Certified Professional</span>
+                                </div>
                             </div>
                         </div>
-                    </article>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certificates Section - Enhanced presentation -->
-   <section class="certificates-section" id="certificates" aria-label="Professional Certifications">
-    <div class="container">
-        <header class="section-header text-center mb-5">
-            <h2 class="section-title gradient-text">Professional Certifications</h2>
-            <p class="section-subtitle">Industry-recognized credentials and achievements</p>
-        </header>
-        
-        <div class="row g-4 justify-content-center">
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Core Expertise</h2>
+                <p class="section-subtitle">Technologies and frameworks powering intelligent solutions</p>
+            </div>
             
-            <!-- HCIA Certification -->
-            <div class="col-lg-5 col-md-6">
-                <div class="glass-card certificate-card h-100">
+            <div class="skills-grid">
+                <div class="glass-card skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="skill-title">Machine Learning</h3>
+                    <p class="skill-description">Advanced regression, classification, and clustering algorithms with scikit-learn and custom implementations for predictive modeling.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                    </div>
+                </div>
+                
+                <div class="glass-card skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="skill-title">Deep Learning</h3>
+                    <p class="skill-description">Convolutional Neural Networks, Recurrent Networks, and Transformer architectures for complex AI applications.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Keras</span>
+                    </div>
+                </div>
+                
+                <div class="glass-card skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="skill-title">Computer Vision</h3>
+                    <p class="skill-description">Image processing, object detection, and classification using state-of-the-art CNN architectures and OpenCV.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">YOLO</span>
+                        <span class="skill-tag">MobileNet</span>
+                    </div>
+                </div>
+                
+                <div class="glass-card skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3 class="skill-title">Python Ecosystem</h3>
+                    <p class="skill-description">Comprehensive data science stack with robust ML pipelines, data visualization, and deployment solutions.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jupyter</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section - Redesigned -->
+    <section class="section section-alternate" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Featured Projects</h2>
+                <p class="section-subtitle">Innovative solutions powered by artificial intelligence</p>
+            </div>
+            
+            <div class="projects-grid">
+                <article class="glass-card project-card">
+                    <div class="project-image-wrapper">
+                        <img src="assets/Projects/Fire Detection.png" 
+                             alt="Fire Detection System - Real-time fire detection using CNN" 
+                             class="project-image"
+                             loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <div class="project-metrics">
+                                    <span class="metric-badge">98% Accuracy</span>
+                                    <span class="metric-badge">Real-time</span>
+                                </div>
+                                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Fire Detection AI</h3>
+                                <p style="font-size: 1rem;">Advanced CNN-based fire detection system</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Fire Detection System</h3>
+                            <span class="status-badge status-completed">Completed</span>
+                        </div>
+                        
+                        <p class="project-description">
+                            A state-of-the-art CNN-based fire detection model built with MobileNetV2 architecture, achieving over 98% accuracy in real-time fire detection. Optimized for mobile deployment with efficient resource utilization.
+                        </p>
+                        
+                        <div class="features-grid">
+                            <div class="feature-item">Real-time processing</div>
+                            <div class="feature-item">Mobile-optimized</div>
+                            <div class="feature-item">High accuracy (98%+)</div>
+                            <div class="feature-item">Low computation</div>
+                        </div>
+                        
+                        <div class="tech-stack">
+                            <span class="tech-tag primary">MobileNetV2</span>
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">OpenCV</span>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="https://github.com/Ali-Ashraf-510/FireDetectionApp" 
+                               class="btn-modern"
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                                <span>View Code</span>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/ali-ashraf-8b619b22a_ai-deeplearning-tensorflow-activity-7356086060134653952-cm_f?utm_source=share&utm_medium=member_desktop&rcm=ACoAADlWFEoBXZCDOatxLUNOb9A4uVa4pg-laiw" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="btn-secondary">
+                                <i class="fas fa-play"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section - Redesigned -->
+    <section class="section" id="certificates">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Professional Certifications</h2>
+                <p class="section-subtitle">Industry-recognized credentials and achievements</p>
+            </div>
+            
+            <div class="certificates-grid">
+                <!-- HCIA Certification -->
+                <div class="glass-card certificate-card">
                     <div class="certificate-image-wrapper">
                         <img src="assets/Certifications/HCIA.png" 
                              alt="HCIA Certification from Huawei Technologies" 
                              class="certificate-image"
                              loading="lazy">
                         <div class="certificate-badge">
-                            <i class="fas fa-award" aria-hidden="true"></i>
+                            <i class="fas fa-award"></i>
                         </div>
                     </div>
                     
                     <div class="certificate-content">
                         <h3 class="certificate-title">HCIA Certification</h3>
                         <p class="certificate-issuer">
-                            <i class="fas fa-building" aria-hidden="true"></i>
+                            <i class="fas fa-building"></i>
                             Huawei Technologies
                         </p>
                         <p class="certificate-description">
@@ -304,28 +282,27 @@
                         </p>
                         <div class="certificate-skills">
                             <span class="cert-skill">AI Fundamentals</span>
+                            <span class="cert-skill">Cloud Computing</span>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- NTI AI Graduate Certification -->
-            <div class="col-lg-5 col-md-6">
-                <div class="glass-card certificate-card h-100">
+                <!-- NTI AI Graduate Certification -->
+                <div class="glass-card certificate-card">
                     <div class="certificate-image-wrapper">
                         <img src="assets/Certifications/NTI.jpg" 
                              alt="NTI AI Graduate Certificate with 98% score" 
                              class="certificate-image"
                              loading="lazy">
                         <div class="certificate-badge">
-                            <i class="fas fa-medal" aria-hidden="true"></i>
+                            <i class="fas fa-medal"></i>
                         </div>
                     </div>
                     
                     <div class="certificate-content">
-                        <h3 class="certificate-title">NTI AI Graduate Certification</h3>
+                        <h3 class="certificate-title">NTI AI Graduate</h3>
                         <p class="certificate-issuer">
-                            <i class="fas fa-university" aria-hidden="true"></i>
+                            <i class="fas fa-university"></i>
                             National Telecommunication Institute
                         </p>
                         <p class="certificate-description">
@@ -333,73 +310,67 @@
                         </p>
                         <div class="certificate-achievements">
                             <div class="achievement">
-                                <span class="achievement-label">Score:</span>
-                                <span class="achievement-value">98%</span>
+                                <div class="achievement-label">Score</div>
+                                <div class="achievement-value">98%</div>
                             </div>
                             <div class="achievement">
-                                <span class="achievement-label">Hours:</span>
-                                <span class="achievement-value">80h</span>
+                                <div class="achievement-label">Hours</div>
+                                <div class="achievement-value">80h</div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- DEPI Front End Graduate Certification -->
-            <div class="col-lg-5 col-md-6">
-                <div class="glass-card certificate-card h-100">
+                <!-- DEPI Front End Graduate -->
+                <div class="glass-card certificate-card">
                     <div class="certificate-image-wrapper">
                         <img src="assets/Certifications/DEPI front end.png" 
                              alt="DEPI Front End Graduate Certification" 
                              class="certificate-image"
                              loading="lazy">
                         <div class="certificate-badge">
-                            <i class="fas fa-medal" aria-hidden="true"></i>
+                            <i class="fas fa-code"></i>
                         </div>
                     </div>
                     
                     <div class="certificate-content">
-                        <h3 class="certificate-title">DEPI Front End Graduate Certification</h3>
+                        <h3 class="certificate-title">Frontend Developer Graduate</h3>
                         <p class="certificate-issuer">
-                            <i class="fas fa-university" aria-hidden="true"></i>
-                            Digital Egypt Pioneers Initiative - DEPI
+                            <i class="fas fa-university"></i>
+                            Digital Egypt Pioneers Initiative
                         </p>
                         <p class="certificate-description">
                             Successfully achieving excellence in the Digital Egypt Pioneers Program (Software Development – Frontend Developer) from April to October 2024.
                         </p>
                         <div class="certificate-achievements">
                             <div class="achievement">
-                                <span class="achievement-label">Hours:</span>
-                                <span class="achievement-value">160</span>
+                                <div class="achievement-label">Duration</div>
+                                <div class="achievement-value">6 Months</div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Business English Track -->
-            <div class="col-lg-5 col-md-6">
-                <div class="glass-card certificate-card h-100">
+                <!-- Business English Track -->
+                <div class="glass-card certificate-card">
                     <div class="certificate-image-wrapper">
                         <img src="assets/Certifications/DEPI english.png" 
-                             alt="Business English Track Certificate - Digital Egypt Pioneers" 
+                             alt="Business English Track Certificate" 
                              class="certificate-image"
                              loading="lazy">
                         <div class="certificate-badge">
-                            <i class="fas fa-award" aria-hidden="true"></i>
+                            <i class="fas fa-language"></i>
                         </div>
                     </div>
 
                     <div class="certificate-content">
                         <h3 class="certificate-title">Business English Track</h3>
                         <p class="certificate-issuer">
-                            <i class="fas fa-university" aria-hidden="true"></i>
-                            Ministry of Communications and Information Technology (MCIT) – Digital Egypt Pioneers
+                            <i class="fas fa-university"></i>
+                            Ministry of Communications - DEPI
                         </p>
                         <p class="certificate-description">
-                            Successfully completed the <strong>Business English Track (Round 1)</strong> 
-                            offered by OTO Courses under the sponsorship of the Ministry of Communications and Information Technology, 
-                            from <strong>April to October 2024</strong>.
+                            Successfully completed the Business English Track offered by OTO Courses under the sponsorship of the Ministry of Communications and Information Technology, from April to October 2024.
                         </p>
                         <div class="certificate-skills">
                             <span class="cert-skill">Business Communication</span>
@@ -408,19 +379,16 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-        </div> <!-- row -->
-    </div> <!-- container -->
-</section>
-
-
-    <!-- Contact Section - Enhanced form and layout -->
-    <section class="contact-section" id="contact" aria-label="Contact Information and Form">
+    <!-- Contact Section -->
+    <section class="section section-alternate" id="contact">
         <div class="container">
-            <header class="section-header text-center mb-5">
+            <div class="section-header">
                 <h2 class="section-title gradient-text">Let's Connect</h2>
                 <p class="section-subtitle">Ready to collaborate on exciting AI projects and opportunities</p>
-            </header>
+            </div>
             
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-7">
@@ -428,12 +396,11 @@
                         <form action="https://formspree.io/f/myzpnwee" 
                               method="POST" 
                               class="contact-form"
-                              aria-label="Contact form"
                               novalidate>
                             
                             <div class="form-group">
                                 <label for="name" class="form-label">
-                                    <i class="fas fa-user" aria-hidden="true"></i>
+                                    <i class="fas fa-user"></i>
                                     Full Name
                                 </label>
                                 <input type="text" 
@@ -441,14 +408,13 @@
                                        name="name" 
                                        class="form-control" 
                                        required 
-                                       aria-required="true"
                                        placeholder="Enter your full name">
                                 <div class="form-feedback"></div>
                             </div>
                             
                             <div class="form-group">
                                 <label for="email" class="form-label">
-                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <i class="fas fa-envelope"></i>
                                     Email Address
                                 </label>
                                 <input type="email" 
@@ -456,14 +422,13 @@
                                        name="email" 
                                        class="form-control" 
                                        required 
-                                       aria-required="true"
                                        placeholder="your.email@example.com">
                                 <div class="form-feedback"></div>
                             </div>
                             
                             <div class="form-group">
                                 <label for="subject" class="form-label">
-                                    <i class="fas fa-tag" aria-hidden="true"></i>
+                                    <i class="fas fa-tag"></i>
                                     Subject
                                 </label>
                                 <select id="subject" name="subject" class="form-control" required>
@@ -478,7 +443,7 @@
                             
                             <div class="form-group">
                                 <label for="message" class="form-label">
-                                    <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                                    <i class="fas fa-comment-dots"></i>
                                     Your Message
                                 </label>
                                 <textarea id="message" 
@@ -486,15 +451,14 @@
                                           rows="5" 
                                           class="form-control" 
                                           required 
-                                          aria-required="true" 
                                           placeholder="Tell me about your project, opportunity, or how we can work together..."></textarea>
                                 <div class="form-feedback"></div>
                             </div>
                             
-                            <button type="submit" class="btn-primary-gradient btn-submit">
+                            <button type="submit" class="btn-modern btn-submit">
                                 <span class="btn-text">Send Message</span>
-                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                                <div class="btn-loader" aria-hidden="true">
+                                <i class="fas fa-paper-plane"></i>
+                                <div class="btn-loader">
                                     <i class="fas fa-spinner fa-spin"></i>
                                 </div>
                             </button>
@@ -503,7 +467,7 @@
                 </div>
                 
                 <div class="col-lg-5">
-                    <div class="glass-card contact-info-card h-100">
+                    <div class="glass-card contact-info-card">
                         <div class="contact-info">
                             <h3 class="contact-title gradient-text">Get in Touch</h3>
                             <p class="contact-intro">
@@ -513,7 +477,7 @@
                             <div class="contact-details">
                                 <div class="contact-item">
                                     <div class="contact-icon">
-                                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                                        <i class="fas fa-envelope"></i>
                                     </div>
                                     <div class="contact-content">
                                         <h4>Email</h4>
@@ -524,7 +488,7 @@
                                 
                                 <div class="contact-item">
                                     <div class="contact-icon">
-                                        <i class="fas fa-clock" aria-hidden="true"></i>
+                                        <i class="fas fa-clock"></i>
                                     </div>
                                     <div class="contact-content">
                                         <h4>Response Time</h4>
@@ -534,7 +498,7 @@
                                 
                                 <div class="contact-item">
                                     <div class="contact-icon">
-                                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                        <i class="fas fa-map-marker-alt"></i>
                                     </div>
                                     <div class="contact-content">
                                         <h4>Location</h4>
@@ -549,25 +513,22 @@
                                     <a href="https://www.linkedin.com/in/ali-ashraf-8b619b22a" 
                                        target="_blank" 
                                        rel="noopener noreferrer" 
-                                       class="social-link linkedin"
-                                       aria-label="Connect on LinkedIn">
-                                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                       class="social-link linkedin">
+                                        <i class="fab fa-linkedin"></i>
                                         <span>LinkedIn</span>
                                     </a>
                                     
                                     <a href="https://github.com/Ali-Ashraf-510" 
                                        target="_blank" 
                                        rel="noopener noreferrer" 
-                                       class="social-link github"
-                                       aria-label="View GitHub profile">
-                                        <i class="fab fa-github" aria-hidden="true"></i>
+                                       class="social-link github">
+                                        <i class="fab fa-github"></i>
                                         <span>GitHub</span>
                                     </a>
                                     
                                     <a href="mailto:aliabofooda1234@gmail.com" 
-                                       class="social-link email"
-                                       aria-label="Send email directly">
-                                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                                       class="social-link email">
+                                        <i class="fas fa-envelope"></i>
                                         <span>Email</span>
                                     </a>
                                 </div>
@@ -579,8 +540,8 @@
         </div>
     </section>
 
-    <!-- Enhanced Footer -->
-    <footer class="footer" role="contentinfo">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
