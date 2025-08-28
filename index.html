@@ -14,8 +14,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <!-- Google Fonts - Improved typography with Inter and Fira Code -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
+   
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,6 +22,25 @@
     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle between light and dark theme" title="Switch Theme">
         <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
     </button>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal" aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        <div class="image-modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle" class="modal-title"></h2>
+                <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-image-container">
+                <img id="modalImage" class="modal-image" alt="" />
+            </div>
+            <div class="modal-body">
+                <p id="modalDescription" class="modal-description"></p>
+                <div id="modalMeta" class="modal-meta"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section - Enhanced with better hierarchy -->
     <section class="hero-section" id="home" aria-label="Introduction">
@@ -208,8 +226,9 @@
                         <div class="project-image-wrapper">
                             <img src="assets/Projects/Fire Detection.png" 
                                  alt="Fire Detection System - Real-time fire detection using CNN" 
-                                 class="project-image"
-                                 loading="lazy">
+                                 class="project-image clickable-image"
+                                 loading="lazy"
+                                 onclick="openModal('Fire Detection System', 'assets/Projects/Fire Detection.png', 'A state-of-the-art CNN-based fire detection model built with MobileNetV2 architecture, achieving over 98% accuracy in real-time fire detection. Optimized for mobile deployment with efficient resource utilization.', 'project')">
                             <div class="project-overlay">
                                 <div class="project-metrics">
                                     <span class="metric">98% Accuracy</span>
@@ -286,8 +305,9 @@
                     <div class="certificate-image-wrapper">
                         <img src="assets/Certifications/HCIA.png" 
                              alt="HCIA Certification from Huawei Technologies" 
-                             class="certificate-image"
-                             loading="lazy">
+                             class="certificate-image clickable-image"
+                             loading="lazy"
+                             onclick="openModal('HCIA Certification', 'assets/Certifications/HCIA.png', 'Certified in Huawei AI and cloud computing fundamentals, demonstrating comprehensive expertise in enterprise-level artificial intelligence solutions and infrastructure.', 'certificate')">
                         <div class="certificate-badge">
                             <i class="fas fa-award" aria-hidden="true"></i>
                         </div>
@@ -315,8 +335,9 @@
                     <div class="certificate-image-wrapper">
                         <img src="assets/Certifications/NTI.jpg" 
                              alt="NTI AI Graduate Certificate with 98% score" 
-                             class="certificate-image"
-                             loading="lazy">
+                             class="certificate-image clickable-image"
+                             loading="lazy"
+                             onclick="openModal('NTI AI Graduate Certification', 'assets/Certifications/NTI.jpg', 'NTI / Huawei Egyptian Talent Academy Track in Artificial Intelligence with 80 comprehensive hours of training and achieved an outstanding score of 98%.', 'certificate')">
                         <div class="certificate-badge">
                             <i class="fas fa-medal" aria-hidden="true"></i>
                         </div>
@@ -351,8 +372,9 @@
                     <div class="certificate-image-wrapper">
                         <img src="assets/Certifications/DEPI front end.png" 
                              alt="DEPI Front End Graduate Certification" 
-                             class="certificate-image"
-                             loading="lazy">
+                             class="certificate-image clickable-image"
+                             loading="lazy"
+                             onclick="openModal('DEPI Front End Graduate Certification', 'assets/Certifications/DEPI front end.png', 'Successfully achieving excellence in the Digital Egypt Pioneers Program (Software Development – Frontend Developer) from April to October 2024.', 'certificate')">
                         <div class="certificate-badge">
                             <i class="fas fa-medal" aria-hidden="true"></i>
                         </div>
@@ -383,8 +405,9 @@
                     <div class="certificate-image-wrapper">
                         <img src="assets/Certifications/DEPI english.png" 
                              alt="Business English Track Certificate - Digital Egypt Pioneers" 
-                             class="certificate-image"
-                             loading="lazy">
+                             class="certificate-image clickable-image"
+                             loading="lazy"
+                             onclick="openModal('Business English Track', 'assets/Certifications/DEPI english.png', 'Successfully completed the Business English Track (Round 1) offered by OTO Courses under the sponsorship of the Ministry of Communications and Information Technology, from April to October 2024.', 'certificate')">
                         <div class="certificate-badge">
                             <i class="fas fa-award" aria-hidden="true"></i>
                         </div>
@@ -601,7 +624,6 @@
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
