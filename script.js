@@ -52,10 +52,6 @@ function openModal(title, imageSrc, description, type) {
                 <span>Project</span>
             </div>
             <div class="modal-meta-item">
-                <i class="fas fa-calendar" aria-hidden="true"></i>
-                <span>2024</span>
-            </div>
-            <div class="modal-meta-item">
                 <i class="fas fa-code" aria-hidden="true"></i>
                 <span>Machine Learning</span>
             </div>
@@ -65,10 +61,6 @@ function openModal(title, imageSrc, description, type) {
             <div class="modal-meta-item">
                 <i class="fas fa-certificate" aria-hidden="true"></i>
                 <span>Certification</span>
-            </div>
-            <div class="modal-meta-item">
-                <i class="fas fa-calendar" aria-hidden="true"></i>
-                <span>2024</span>
             </div>
             <div class="modal-meta-item">
                 <i class="fas fa-graduation-cap" aria-hidden="true"></i>
